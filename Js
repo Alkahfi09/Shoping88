@@ -1,0 +1,12 @@
+p.innerHTML = `
+  <div class="products">
+    ${db.products.map(pr => `
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x150?text=Product" />
+        <h4>${pr.name}</h4>
+        <div class="price">Rp ${pr.price}</div>
+        <button onclick="order(${pr.id})">Add to Cart</button>
+      </div>
+    `).join('')}
+  </div>
+`;
